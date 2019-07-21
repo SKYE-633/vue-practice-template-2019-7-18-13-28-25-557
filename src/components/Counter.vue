@@ -1,10 +1,9 @@
 <template>
 <div>
-  <div class="hello">
+  
     <button @click="increase">+</button>
     <span>{{ counter }}</span>
     <button @click="decrease">-</button>
-  </div>
 
 </div>
 </template>
@@ -12,6 +11,9 @@
 <script>
 export default {
   name: 'Counter',
+  props:{
+    msg:String
+  },
   data(){
     return  {
       counter:0
@@ -19,10 +21,12 @@ export default {
   },
   methods:{
     increase(){
-      this.counter++
+      this.counter++,
+      this.$emit("increase");
     },
     decrease(){
-      this.counter--
+      this.counter--,
+      this.$emit("decrease");
     }
   }
 }
