@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Counter msg="Welcome to Your Vue.js App"/>
-    <CounterGroup />
+  <div class="hello">
+    <div>
+      <input id="count" v-model.number="num"/>
+      <CounterGroup :CounterNum="num"></CounterGroup>
+    </div>
   </div>
 </template>
 
@@ -11,9 +12,17 @@ import Counter from './components/Counter.vue'
 import CounterGroup from './components/CounterGroup.vue'
 export default {
   name: 'app',
+  props:{
+
+  },
   components: {
     Counter,
     CounterGroup
+  },
+  data(){
+    return{
+      num:0
+    }
   }
 }
 </script>
