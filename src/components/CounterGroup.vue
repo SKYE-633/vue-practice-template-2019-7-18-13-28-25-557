@@ -1,6 +1,7 @@
 <template>
 <div>
-  
+  <input v-model="inputValue"/>
+
   
 
 
@@ -12,7 +13,9 @@
 <script>
 export default {
    data(){
-     return {aaa:0}
+     return {
+       inputValue:''
+      }
    }
 }
 </script>
