@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Counter from './components/Counter.vue'
+
 import CounterGroup from './components/CounterGroup.vue'
 export default {
   name: 'app',
@@ -16,7 +16,7 @@ export default {
 
   },
   components: {
-    Counter,
+   
     CounterGroup
   },
   data(){
